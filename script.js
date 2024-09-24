@@ -29,13 +29,9 @@ function locoScroll() {
 
 // PARAMETERS: Paragraph Element, Length in Percentage
 function fadeText(elem, posn, markers = false) {
-  let letterSpans = "";
-  let para = document.querySelector(elem);
-  para.textContent.split("").forEach(function (letter) {
-    letterSpans += `<span>${letter}</span>`;
-  });
-  // console.log(`${letterSpans}`); // For Debugging
-  para.innerHTML = letterSpans;
+  const para = document.querySelector(elem);
+  const paraContent = para.textContent.split("");
+  para.innerHTML = paraContent.map(char => `<span>${char}</span>`).join("");
 
   gsap.to(`${elem}>span`, {
     color: "#fff",
