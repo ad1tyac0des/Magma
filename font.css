@@ -1,0 +1,14 @@
+@font-face {
+    font-family: jost;
+    src: url(Assets/Fonts/Jost-Variable.ttf);
+}
+
+@font-face {
+    font-family: Roboto;
+    src: url(Assets/Fonts/Roboto.ttf);
+}
+
+@font-face {
+    font-family: Roboto-Medium;
+    src: url(Assets/Fonts/Roboto-Medium.ttf);
+}

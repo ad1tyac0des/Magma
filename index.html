@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="font.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
+
+<body>
+    <div id="main">
+        <div data-scroll data-scroll-speed="-6" id="page1">
+            <nav>
+                <img src="Assets/Images/logo.png" alt="logo">
+                <div id="right-nav">
+                    <button>Book a Demo</button>
+                    <button id="menu-icon-wrapper">
+                        <svg id="menu-icon" viewBox="0 0 30 30">
+                            <line class="menu-line" x1="5" y1="10" x2="25" y2="10" />
+                            <line class="menu-line" x1="5" y1="20" x2="25" y2="20" />
+                        </svg>
+                    </button>
+                </div>
+            </nav>
+            <div id="page1-bottom">
+                <div id="hero-content">
+                    <h3>Experience Real Estate Agility</h3>
+                    <div id="hero-content-inner">
+                        <p>Create a Digital Twin Token (DTT®) of your existing building and release the potential of Web3. </p>
+                        <button>Learn More</button>
+                    </div>
+                </div>
+
+                <div id="scroll-indicator">
+                    <h5>Scroll</h5>
+                    <i class="ri-arrow-down-line"></i>
+                </div>
+            </div>
+            <video src="https://thisismagma.com/wp-content/themes/magma/assets/home/hero/1.mp4?2" autoplay loop
+                muted></video>
+        </div>
+
+        <div id="page2" class="text-fade-page">
+            <div id="page2-content" class="text-fade-content">
+                <h2>Certify your building as a Digital Twin Token (DTT®)</h2>
+                <p>The Digital Twin Token is a unique digital asset backed by property data. Magma combines your
+                    building’s components and systems essential information into a DTT®.</p>
+            </div>
+        </div>
+
+        <div id="page3" class="canvas-page">
+            <canvas></canvas>
+        </div>
+
+        <div id="page4" class="text-fade-page">
+            <div id="page4-content" class="text-fade-content">
+                <h2>Connect the Building's twin to your stakeholders</h2>
+                <p>Users connect directly to the DTT® without any intermediaries. As Stakeholder, they have the power to
+                    upload and verify information that enriches the Digital Twin Token. A Stakeholder's ability to
+                    access validated-data to perform tasks depends on their specific role.</p>
+            </div>
+        </div>
+
+        <div id="page5" class="canvas-page">
+            <canvas></canvas>
+        </div>
+
+        <div id="page6" class="text-fade-page">
+            <div id="page6-content" class="text-fade-content">
+                <h2>Increase your Digital Twin Token’s value</h2>
+                <p>DTT® data increases the value of your digital asset by lowering operational costs, improving energy
+                    use, assisting commercialization, and boosting the liquidity of your building.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+        integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+        integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
