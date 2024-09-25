@@ -58,7 +58,6 @@ function imgSequenceAnimation(canvasContainer, imageDir, totalImages) {
   const images = [];
   let imagesCount = 0;
 
-
   function preloadImage() {
     for (let i = 1; i <= frames.maxIndex; i++) {
       const imgUrl = `./Assets/Images/${imageDir}/${imageDir.toLowerCase()}${i}.webp`;
@@ -108,20 +107,26 @@ function imgSequenceAnimation(canvasContainer, imageDir, totalImages) {
       currentIndex: frames.maxIndex,
       snap: frames.currentIndex,
       onUpdate: () => {
-        console.log(Math.floor(frames.currentIndex));
         drawImage(Math.floor(frames.currentIndex));
       },
       scrollTrigger: {
         scroller: "#main",
-        trigger: `${canvasContainer}`,
+        trigger: `${canvasContainer}>canvas`,
         start: "top top",
-        end: "bottom top",
-        pin: true,
-        markers: true,
+        end: "300% top",
         scrub: 1,
       }
     })
   }
+
+  ScrollTrigger.create({
+    trigger: canvasContainer,
+    pin: true,
+    scroller: "#main",
+    start: "top top",
+    end: "300% top",
+  });
+
 
   preloadImage();
 }
@@ -130,6 +135,6 @@ function imgSequenceAnimation(canvasContainer, imageDir, totalImages) {
 locoScroll();
 fadeText("#page2-content>p", "40%");
 imgSequenceAnimation("#page3", "Frame", 66);
-fadeText("#page4-content>p", "37%", true);
+fadeText("#page4-content>p", "37%");
 imgSequenceAnimation("#page5", "Bridge", 39);
 fadeText("#page6-content>p", "40%");
