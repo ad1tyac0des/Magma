@@ -249,3 +249,27 @@ canvas {
     font-size: 4.3vw;
     line-height: 1;
 }
+
+/* Page7 */
+
+.page7-circle {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9;
+    width: 14vw;
+    height: 14vw;
+    border-radius: 50%;
+    border: 1px solid #ffffff29;
+}
+
+.page7-circle-inn {
+    width: 65%;
+    height: 65%;
+    border-radius: 50%;
+    border: 1px solid #ffffff99;
+}

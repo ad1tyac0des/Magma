@@ -139,3 +139,52 @@ fadeText("#page4-content>p", "37%");
 imgSequenceAnimation("#page5", "Bridge", 39);
 fadeText("#page6-content>p", "40%");
 imgSequenceAnimation("#page7", "Lore", 136)
+
+gsap.from(".page7-circle", {
+  opacity: 0,
+  scrollTrigger: {
+    trigger: ".page7-circle",
+    scroller: "#main",
+    markers: true,
+    start: "top center",
+    end: "top top",
+    scrub: .7,
+  }
+})
+
+gsap.from(".page7-circle", {
+  y: -840,
+  scrollTrigger: {
+    trigger: ".page7-circle",
+    scroller: "#main",
+    // markers: true,
+    start: "top center",
+    end: "bottom+=100% top",
+    scrub: .7,
+  }
+})
+
+gsap.to(".page7-circle", {
+  scale: 3.6,
+  scrollTrigger: {
+    trigger: ".page7-circle",
+    scroller: "#main",
+    // markers: true,
+    start: "top center",
+    end: "bottom+=600% top",
+    scrub: .7,
+  }
+})
+
+gsap.to(".page7-circle-inn", {
+  backgroundColor: "#0a3bceb4",
+  scrollTrigger: {
+    trigger: ".page7-circle-inn",
+    scroller: "#main",
+    // markers: true,
+    start: "top center",
+    end: "bottom+=600% top",
+    scrub: .7,
+  }
+})
+
