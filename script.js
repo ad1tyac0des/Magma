@@ -138,3 +138,4 @@ imgSequenceAnimation("#page3", "Frame", 66);
 fadeText("#page4-content>p", "37%");
 imgSequenceAnimation("#page5", "Bridge", 39);
 fadeText("#page6-content>p", "40%");
+imgSequenceAnimation("#page7", "Lore", 136)
