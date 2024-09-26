@@ -135,7 +135,7 @@ body {
     color: #fff;
 }
 
-#hero-content-inner button {
+.learn-more {
     padding: 16px 52px;
     border-radius: 50px;
     border: none;
@@ -272,4 +272,38 @@ canvas {
     height: 65%;
     border-radius: 50%;
     border: 1px solid #ffffff99;
+}
+
+/* Page8 */
+#page8{
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    /* margin-top: 10vw; */
+}
+
+#page8-content{
+    position: absolute;
+    bottom: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1vw;
+}
+
+#page8-content h1{
+    font-family: jost;
+    color: #fff;
+    font-size: 5.8vw;
+    font-weight: 300;
+}
+
+#page8 video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }

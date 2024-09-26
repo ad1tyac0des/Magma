@@ -145,7 +145,7 @@ gsap.from(".page7-circle", {
   scrollTrigger: {
     trigger: ".page7-circle",
     scroller: "#main",
-    markers: true,
+    // markers: true,
     start: "top center",
     end: "top top",
     scrub: .7,
