@@ -344,3 +344,37 @@ canvas {
     object-fit: cover;
     border-radius: 10px;
 }
+
+#page10{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 9vw;
+    padding-bottom: 12vw;
+}
+
+#page10-wrapper{
+    width: 59%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#page10-wrapper .features-section{
+    font-family: jost;
+}
+
+.features-section h1{
+    color: #fff;
+    font-weight: 400;
+    font-size: 1.8vw;
+    margin-bottom: .7vw;
+}
+
+.features-section p{
+    color: #ffffffd9;
+    font-weight: 300;
+    font-size: 1.4vw;
+}
