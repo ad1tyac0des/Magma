@@ -307,3 +307,40 @@ canvas {
     height: 100%;
     object-fit: cover;
 }
+
+#page9{
+    width: 100%;
+    height: 100vh;
+    padding: 13vw 9vw 4.8vw 9vw;
+}
+
+#page9-wrapper{
+    width: 100%;
+    height: 100%;
+    display: flex;
+}   
+
+#page9-left{
+    width: 35%;
+    padding-top: 1.5vw;
+}
+
+#page9-left h1{
+    font-family: jost;
+    font-weight: 300;
+    font-size: 6vw;
+    line-height: 1;
+    color: #fff;
+    /* text-align: center; */
+}
+
+#page9-right{
+    width: 65%;
+}
+
+#page9-right img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
