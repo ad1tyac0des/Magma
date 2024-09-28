@@ -30,7 +30,7 @@ function locoScroll() {
 function fadeText(element, posn, markers = false) {
   const para = document.querySelector(element);
   const paraContent = para.textContent.split("");
-  para.innerHTML = paraContent.map(char => `<span>${char}</span>`).join("");
+  para.innerHTML = paraContent.map((char) => `<span>${char}</span>`).join("");
 
   gsap.to(`${element}>span`, {
     color: "#fff",
@@ -42,18 +42,18 @@ function fadeText(element, posn, markers = false) {
       end: `bottom ${posn}`,
       scrub: 0.6,
       markers: markers,
-    }
+    },
   });
 }
 
 function imgSequenceAnimation(canvasContainer, imageDir, totalImages) {
-  const canvas = document.querySelector(`${canvasContainer}>canvas`)
+  const canvas = document.querySelector(`${canvasContainer}>canvas`);
   const ctx = canvas.getContext("2d");
 
   const frames = {
     currentIndex: 0,
     maxIndex: totalImages,
-  }
+  };
 
   const images = [];
   let imagesCount = 0;
@@ -71,7 +71,7 @@ function imgSequenceAnimation(canvasContainer, imageDir, totalImages) {
           drawImage(frames.currentIndex);
           startAnimation();
         }
-      }
+      };
       images.push(img);
     }
   }
@@ -115,8 +115,8 @@ function imgSequenceAnimation(canvasContainer, imageDir, totalImages) {
         start: "top top",
         end: "300% top",
         scrub: 1,
-      }
-    })
+      },
+    });
   }
 
   ScrollTrigger.create({
@@ -127,8 +127,71 @@ function imgSequenceAnimation(canvasContainer, imageDir, totalImages) {
     end: "300% top",
   });
 
-
   preloadImage();
+}
+
+function animateCircle() {
+  gsap.from(".page7-circle", {
+    opacity: 0,
+    scrollTrigger: {
+      trigger: ".page7-circle",
+      scroller: "#main",
+      // markers: true,
+      start: "top center",
+      end: "top top",
+      scrub: 0.7,
+    },
+  });
+
+  gsap.from(".page7-circle", {
+    y: -840,
+    scrollTrigger: {
+      trigger: ".page7-circle",
+      scroller: "#main",
+      // markers: true,
+      start: "top center",
+      end: "bottom+=100% top",
+      scrub: 0.7,
+    },
+  });
+
+  gsap.to(".page7-circle", {
+    scale: 4,
+    repeat: 1,
+    yoyo: true,
+    scrollTrigger: {
+      trigger: ".page7-circle",
+      scroller: "#main",
+      // markers: true,
+      start: "top center",
+      end: "bottom+=1000% top",
+      scrub: 0.7,
+    },
+  });
+
+  gsap.to("#page7", {
+    opacity: 0,
+    scrollTrigger: {
+      trigger: "#page7",
+      scroller: "#main",
+      // markers: true,
+      start: "top+=1% top-=1%",
+      end: "1% top",
+      scrub: 0.7,
+    },
+  });
+
+  gsap.to(".page7-circle-inn", {
+    backgroundColor: "#0a3bceb4",
+    scrollTrigger: {
+      trigger: ".page7-circle-inn",
+      scroller: "#main",
+      // markers: true,
+      start: "top center",
+      end: "bottom+=600% top",
+      scrub: 0.7,
+    },
+  });
 }
 
 
@@ -138,53 +201,5 @@ imgSequenceAnimation("#page3", "Frame", 66);
 fadeText("#page4-content>p", "37%");
 imgSequenceAnimation("#page5", "Bridge", 39);
 fadeText("#page6-content>p", "40%");
-imgSequenceAnimation("#page7", "Lore", 136)
-
-gsap.from(".page7-circle", {
-  opacity: 0,
-  scrollTrigger: {
-    trigger: ".page7-circle",
-    scroller: "#main",
-    // markers: true,
-    start: "top center",
-    end: "top top",
-    scrub: .7,
-  }
-})
-
-gsap.from(".page7-circle", {
-  y: -840,
-  scrollTrigger: {
-    trigger: ".page7-circle",
-    scroller: "#main",
-    // markers: true,
-    start: "top center",
-    end: "bottom+=100% top",
-    scrub: .7,
-  }
-})
-
-gsap.to(".page7-circle", {
-  scale: 3.6,
-  scrollTrigger: {
-    trigger: ".page7-circle",
-    scroller: "#main",
-    // markers: true,
-    start: "top center",
-    end: "bottom+=600% top",
-    scrub: .7,
-  }
-})
-
-gsap.to(".page7-circle-inn", {
-  backgroundColor: "#0a3bceb4",
-  scrollTrigger: {
-    trigger: ".page7-circle-inn",
-    scroller: "#main",
-    // markers: true,
-    start: "top center",
-    end: "bottom+=600% top",
-    scrub: .7,
-  }
-})
-
+imgSequenceAnimation("#page7", "Lore", 136);
+animateCircle()
