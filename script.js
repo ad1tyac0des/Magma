@@ -67,7 +67,7 @@ function imgSequenceAnimation(canvasContainer, imageDir, totalImages) {
       img.onload = () => {
         imagesCount++;
         if (imagesCount === frames.maxIndex) {
-          console.log("all images loaded");
+          // console.log("all images loaded");
           drawImage(frames.currentIndex);
           startAnimation();
         }
@@ -131,6 +131,8 @@ function imgSequenceAnimation(canvasContainer, imageDir, totalImages) {
 }
 
 function animateCircle() {
+  const counter = document.querySelector(".counter");
+
   gsap.from(".page7-circle", {
     opacity: 0,
     scrollTrigger: {
@@ -156,7 +158,9 @@ function animateCircle() {
   });
 
   gsap.to(".page7-circle", {
-    scale: 4,
+    width: "42vw",
+    height: "42vw",
+    transformOrigin: "center center",
     repeat: 1,
     yoyo: true,
     scrollTrigger: {
@@ -189,7 +193,12 @@ function animateCircle() {
       // markers: true,
       start: "top center",
       end: "bottom+=600% top",
-      scrub: 0.7,
+      scrub: true,
+      onUpdate: (self) => {
+        const scrollProgress = self.progress;
+        const scrollValue = gsap.utils.mapRange(0, 1, 0, 60, scrollProgress);
+        counter.textContent = scrollValue.toFixed(0);
+      },
     },
   });
 }

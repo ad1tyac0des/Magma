@@ -72,7 +72,7 @@ body {
 }
 
 #right-nav>button:nth-child(1) {
-    padding: 8px 30px;
+    padding: 8px 0;
 }
 
 #right-nav .text{
@@ -156,7 +156,9 @@ body {
 }
 
 .learn-more {
-    padding: 16px 52px;
+    /* padding: 16px 52px; */
+    width: 12vw;
+    height: 3vw;
     border-radius: 50px;
     border: none;
     background-color: #fff;
@@ -167,6 +169,9 @@ body {
     cursor: pointer;
     position: relative;
     overflow: hidden;
+    display:flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .button-text-container{
@@ -175,6 +180,7 @@ body {
     height: 1.6vw;
     position: relative;
     overflow: hidden;
+    /* white-space: nowrap; */
 }
 
 .text{
@@ -325,18 +331,21 @@ canvas {
 }
 
 /* Page7 */
+#page7{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
 
 .page7-circle {
     display: flex;
     align-items: center;
     justify-content: center;
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     z-index: 9;
-    width: 14vw;
-    height: 14vw;
+    width: 15vw;
+    height: 15vw;
     border-radius: 50%;
     border: 1px solid #ffffff29;
 }
@@ -346,6 +355,23 @@ canvas {
     height: 65%;
     border-radius: 50%;
     border: 1px solid #ffffff99;
+    font-family: jost;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+
+.page7-circle-inn h1{
+    font-size: 3.5vw;
+    font-weight: 300;
+}
+
+.page7-circle-inn h4{
+    font-size: .9vw;
+    font-weight: 400;
+    text-transform: uppercase;
 }
 
 /* Page8 */
