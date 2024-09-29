@@ -58,24 +58,44 @@ body {
 }
 
 #right-nav>button {
-    /* padding: 20px 30px; */
     background-color: transparent;
     border: 1px solid rgba(255, 255, 255, 0.386);
     border-radius: 50px;
     color: #fff;
     height: 100%;
     cursor: pointer;
+    transition: border .3s ease-in-out;
+}
+
+#right-nav button:hover {
+    border-color: #fff;
 }
 
 #right-nav>button:nth-child(1) {
-    padding: 12px 30px;
-    font-size: 17px;
-    font-family: jost;
+    padding: 8px 30px;
+}
+
+#right-nav .text{
+    text-transform: initial;
+    font-size: 1vw;
+    font-weight: 500;
+}
+
+#right-nav .first{
+    color: #0842d7;
+}
+
+#right-nav .second{
+    color: #fff;
+}
+
+#right-nav>.learn-more::after{
+    background-color: #fff;
 }
 
 /* Right Nav 2nd button */
 #right-nav>#menu-icon-wrapper {
-    padding: 9px 20px;
+    padding: 7px 20px;
 }
 
 #menu-icon {
@@ -145,6 +165,56 @@ body {
     font-size: 1vw;
     text-transform: uppercase;
     cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.button-text-container{
+    /* border: 2px solid red; */
+    width: fit-content;
+    height: 1.6vw;
+    position: relative;
+    overflow: hidden;
+}
+
+.text{
+    /* border: 1px solid #000; */
+    height: 100%;
+    font-size: 1.2vw;
+    text-transform: uppercase;
+    align-content: center;
+    transform: translateY(-100%);
+    transition: transform .3s ease-in-out;
+    position: relative;
+    z-index: 9;
+}
+
+.learn-more::after{
+    content:"";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background-color: #0F0F17;
+    transition: height .3s ease-in-out;
+    z-index: 8;
+}
+
+.first{
+    color: #fff;
+}
+
+.second{
+    color: #0842d7;
+}
+
+.learn-more:hover .text{
+    transform: translateY(0%);
+}
+
+.learn-more:hover::after{
+    height: 100%;
 }
 
 #scroll-indicator {
@@ -285,6 +355,7 @@ canvas {
 
 #page8-content {
     position: absolute;
+    z-index: 9;
     bottom: 15%;
     left: 50%;
     transform: translateX(-50%);
@@ -463,8 +534,19 @@ canvas {
 
 #page12-top button {
     background-color: #0842d7;
-    color: #fff;
     margin-top: 4vw;
+}
+
+#page12-top .first{
+    color: #0842d7;
+}
+
+#page12-top .second{
+    color: #fff;
+}
+
+#page12-top .learn-more::after{
+    background-color: #fff;
 }
 
 .social-item {
