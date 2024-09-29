@@ -209,6 +209,11 @@ body {
     color: #0842d7;
 }
 
+.learn-more:hover{
+    background-color: transparent;
+    transition: background-color linear, 1s;
+}
+
 .learn-more:hover .text{
     transform: translateY(0%);
 }
