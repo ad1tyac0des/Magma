@@ -145,33 +145,63 @@ function animateCircle() {
     },
   });
 
-  gsap.from(".page7-circle", {
-    y: -840,
-    scrollTrigger: {
-      trigger: ".page7-circle",
-      scroller: "#main",
-      // markers: true,
-      start: "top center",
-      end: "bottom+=100% top",
-      scrub: 0.7,
-    },
-  });
+  if (window.innerWidth < 768) {
+    gsap.to(".page7-circle", {
+      width: "100vw",
+      height: "100vw",
+      transformOrigin: "center center",
+      repeat: 1,
+      yoyo: true,
+      scrollTrigger: {
+        trigger: ".page7-circle",
+        scroller: "#main",
+        // markers: true,
+        start: "top center",
+        end: "bottom+=1000% top",
+        scrub: 0.7,
+      },
+    });
 
-  gsap.to(".page7-circle", {
-    width: "42vw",
-    height: "42vw",
-    transformOrigin: "center center",
-    repeat: 1,
-    yoyo: true,
-    scrollTrigger: {
-      trigger: ".page7-circle",
-      scroller: "#main",
-      // markers: true,
-      start: "top center",
-      end: "bottom+=1000% top",
-      scrub: 0.7,
-    },
-  });
+    gsap.from(".page7-circle", {
+      y: -540,
+      scrollTrigger: {
+        trigger: ".page7-circle",
+        scroller: "#main",
+        // markers: true,
+        start: "top center",
+        end: "bottom+=100% top",
+        scrub: 0.7,
+      },
+    });
+  } else {
+    gsap.to(".page7-circle", {
+      width: "42vw",
+      height: "42vw",
+      transformOrigin: "center center",
+      repeat: 1,
+      yoyo: true,
+      scrollTrigger: {
+        trigger: ".page7-circle",
+        scroller: "#main",
+        // markers: true,
+        start: "top center",
+        end: "bottom+=1000% top",
+        scrub: 0.7,
+      },
+    });
+
+    gsap.from(".page7-circle", {
+      y: -840,
+      scrollTrigger: {
+        trigger: ".page7-circle",
+        scroller: "#main",
+        // markers: true,
+        start: "top center",
+        end: "bottom+=100% top",
+        scrub: 0.7,
+      },
+    });
+  }
 
   gsap.to("#page7", {
     opacity: 0,
@@ -203,7 +233,6 @@ function animateCircle() {
   });
 }
 
-
 locoScroll();
 fadeText("#page2-content>p", "40%");
 imgSequenceAnimation("#page3", "Frame", 66);
@@ -211,4 +240,4 @@ fadeText("#page4-content>p", "37%");
 imgSequenceAnimation("#page5", "Bridge", 39);
 fadeText("#page6-content>p", "40%");
 imgSequenceAnimation("#page7", "Lore", 136);
-animateCircle()
+animateCircle();
