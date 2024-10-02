@@ -71,20 +71,20 @@ function LoadingAnimation() {
       gsap.to("#preloader-main", {
         display: "none",
         duration: 0.1,
-        delay: 0.5,
+        delay: .7,
       });
 
       gsap.to("#preloader", {
         display: "none",
         duration: 0.1,
-        delay: 1,
+        delay: 1.2,
       });
 
       gsap.to(".preloader-skip", {
         top: "100%",
-        duration: 0.6,
+        duration: 0.8,
         ease: "power2.inOut",
-        stagger: 0.2,
+        stagger: 0.3,
       });
     },
   });
