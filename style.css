@@ -16,6 +16,84 @@ body {
     color: #000000;
 }
 
+/* Preloader */
+
+#preloader {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+}
+
+#preloader-main {
+    width: 100%;
+    height: 100%;
+    padding-top: 25%;
+    background-color: #0a3cce;
+}
+
+#preloader-content {
+    width: 100%;
+    height: fit-content;
+    /* display: flex; */
+    align-items: flex-end;
+    justify-content: space-between;
+    padding: 0 10vw;
+    display: none;
+}
+
+.preloader-text-container {
+    width: 55%;
+}
+
+.preloader-text-container .text-frame {
+    width: fit-content;
+    height: 6.8vw;
+    overflow: hidden;
+}
+
+.preloader-text-container .text-frame h1 {
+    font-family: jost;
+    color: #fff;
+    font-size: 6vw;
+    line-height: 1;
+    font-weight: 300;
+    height: 6vw;
+}
+
+.counter-text-frame {
+    width: fit-content;
+    height: 6.8vw;
+    overflow: hidden;
+}
+
+.counter-text-frame h1 {
+    font-family: jost;
+    color: #fff;
+    font-size: 6vw;
+    line-height: 1;
+    font-weight: 300;
+    height: 6vw;
+}
+
+.preloader-skip {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: -100%;
+    left: 0;
+}
+
+.preloader-skip-1 {
+    background-color: #fff;
+}
+
+.preloader-skip-2 {
+    background-color: #0a3cce;
+}
+
 #main {
     position: relative;
     overflow: hidden;
@@ -736,6 +814,38 @@ canvas {
 
 /* Responsive for Mobile*/
 @media (max-width: 768px) {
+    /* Preloader */
+    #preloader-main {
+        padding-top: 30%;
+    }
+
+    #preloader-content {
+        flex-direction: column;
+        gap: 20vw;
+        padding: 0 5vw;
+    }
+
+    .preloader-text-container {
+        width: 100%;
+    }
+
+    .preloader-text-container .text-frame {
+        height: 16.2vw;
+    }
+
+    .preloader-text-container .text-frame h1 {
+        font-size: 15vw;
+        height: 15vw;
+    }
+
+    .counter-text-frame {
+        height: 16.2vw;
+    }
+
+    .counter-text-frame h1 {
+        font-size: 15vw;
+        height: 15vw;
+    }
 
     /* Page1 Nav */
     #page1>nav {
@@ -1053,6 +1163,10 @@ canvas {
 
 /* Responsive for 500px to 768px */
 @media (min-width: 501px) and (max-width: 768px) {
+    #preloader-content {
+        gap: 10vw;
+    }
+
     #page1-bottom {
         bottom: 15%;
     }
