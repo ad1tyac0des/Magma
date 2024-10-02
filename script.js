@@ -260,6 +260,17 @@ function page9Animation(){
   });
 }
 
+function disableDataScrollOnMobile(){
+  const element = document.querySelector('[data-scroll]')
+  if (window.innerWidth <= 768) {
+    element.removeAttribute('data-scroll')
+    element.removeAttribute('data-scroll-speed')
+    element.removeAttribute('class')
+  }
+}
+
+
+disableDataScrollOnMobile();
 locoScroll();
 fadeText("#page2-content>p", "40%");
 imgSequenceAnimation("#page3", "Frame", 66);
