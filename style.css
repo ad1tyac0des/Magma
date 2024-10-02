@@ -206,15 +206,6 @@ body {
     width: 90%;
 }
 
-/* #hero-content h3 {
-    font-family: jost;
-    color: #fff;
-    font-size: 6vw;
-    line-height: 1;
-    font-weight: 300;
-    width: 60%;
-} */
-
 .hero-text-container {
     width: 60%;
     /* background-color: rgb(0, 255, 132); */
@@ -906,9 +897,17 @@ canvas {
         width: 100%;
     }
 
-    #hero-content h3 {
-        font-size: 15vw;
+    .hero-text-container {
         width: 100%;
+    }
+
+    .hero-text-container .text-frame {
+        height: 16.2vw;
+    }
+
+    .hero-text-container .text-frame h1 {
+        font-size: 15vw;
+        height: 15vw;
     }
 
     #hero-content-inner {

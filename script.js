@@ -71,7 +71,7 @@ function LoadingAnimation() {
       gsap.to("#preloader-main", {
         display: "none",
         duration: 0.1,
-        delay: .7,
+        delay: 0.7,
       });
 
       gsap.to("#preloader", {
@@ -91,51 +91,66 @@ function LoadingAnimation() {
       gsap.from("#page1 video", {
         scale: 1.2,
         duration: 2,
-        delay: .3,
+        delay: 0.3,
         ease: "power3.inOut",
-      })
+      });
 
       gsap.from("#right-nav", {
         y: -200,
         duration: 1.5,
-        delay: .4,
+        delay: 0.4,
         ease: "power2.inOut",
-      })
+      });
 
       gsap.from(".hero-text-container .text-frame h1", {
         y: "600",
         rotation: "65deg",
         duration: 1.4,
-        delay: .3,
+        delay: 0.3,
         ease: "power2.inOut",
       });
 
       gsap.from("#hero-content-inner", {
         y: 190,
         duration: 1.8,
-        delay: .2,
+        delay: 0.2,
         ease: "power2.inOut",
-      })
+      });
 
       gsap.from("#scroll-indicator", {
         y: 190,
         duration: 1.8,
-        delay: .2,
+        delay: 0.2,
         ease: "power2.inOut",
-      })
+      });
 
-      gsap.from("#hero-content-inner>p", {
-        opacity: 0,
-        duration: 1,
-        delay: 2.4,
-      })
+      if (window.innerWidth <= 768) {
+        gsap.from("#hero-content-inner>p", {
+          opacity: 0,
+          duration: 1,
+          delay: 1.65,
+        });
 
-      gsap.from("#hero-content-inner>button", {
-        x: -450,
-        duration: 1,
-        delay: 1.8,
-        ease: "power2.inOut",
-      })
+        gsap.from("#hero-content-inner>button", {
+          x: -450,
+          duration: 1,
+          delay: 1.2,
+          ease: "power2.inOut",
+        });
+      } else {
+        gsap.from("#hero-content-inner>p", {
+          opacity: 0,
+          duration: 1,
+          delay: 2.4,
+        });
+
+        gsap.from("#hero-content-inner>button", {
+          x: -450,
+          duration: 1,
+          delay: 1.8,
+          ease: "power2.inOut",
+        });
+      }
     },
   });
 }
