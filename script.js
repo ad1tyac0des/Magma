@@ -233,6 +233,33 @@ function animateCircle() {
   });
 }
 
+function page9Animation(){
+  gsap.from("#page9-right>img", {
+    opacity: 0,
+    y: 100,
+    duration: 1,
+    scrollTrigger: {
+      trigger: "#page9-right>img",
+      scroller: "#main",
+      start: "top center+=20%",
+      end: "bottom top",
+    }
+  });
+  
+  gsap.from("#page10-wrapper .features-section", {
+    opacity: 0,
+    y: 100,
+    duration: 1,
+    stagger: .2,
+    scrollTrigger: {
+      trigger: "#page10-wrapper .features-section",
+      scroller: "#main",
+      start: "top center+=35%",
+      end: "bottom top",
+    }
+  });
+}
+
 locoScroll();
 fadeText("#page2-content>p", "40%");
 imgSequenceAnimation("#page3", "Frame", 66);
@@ -241,3 +268,4 @@ imgSequenceAnimation("#page5", "Bridge", 39);
 fadeText("#page6-content>p", "40%");
 imgSequenceAnimation("#page7", "Lore", 136);
 animateCircle();
+page9Animation();
