@@ -206,13 +206,34 @@ body {
     width: 90%;
 }
 
-#hero-content h3 {
+/* #hero-content h3 {
     font-family: jost;
     color: #fff;
     font-size: 6vw;
     line-height: 1;
     font-weight: 300;
     width: 60%;
+} */
+
+.hero-text-container {
+    width: 60%;
+    /* background-color: rgb(0, 255, 132); */
+}
+
+.hero-text-container .text-frame {
+    width: fit-content;
+    height: 6.5vw;
+    overflow: hidden;
+    /* border: 1px solid #c70d0d; */
+}
+
+.hero-text-container .text-frame h1 {
+    font-family: jost;
+    color: #fff;
+    font-size: 6vw;
+    line-height: 1;
+    font-weight: 300;
+    height: 6vw;
 }
 
 #hero-content-inner {

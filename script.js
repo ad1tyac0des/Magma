@@ -46,7 +46,7 @@ function LoadingAnimation() {
     y: "600",
     rotation: "65deg",
     duration: 1.2,
-    stagger: 0.1,
+    stagger: 0.05,
     ease: "power2.inOut",
   });
 
@@ -61,7 +61,7 @@ function LoadingAnimation() {
   setTimeout(preloaderCounter, 2500); // Preloader Counter Starts
 
   // preloader Content Disappears
-  gsap.to(".text-frame h1, .counter-text-frame h1", {
+  gsap.to(".preloader-text-container .text-frame h1, .counter-text-frame h1", {
     y: "-600",
     duration: 0.7,
     delay: 3.5,
@@ -83,9 +83,59 @@ function LoadingAnimation() {
       gsap.to(".preloader-skip", {
         top: "100%",
         duration: 0.8,
-        ease: "power2.inOut",
+        ease: "power3.inOut",
         stagger: 0.3,
       });
+
+      // Hero Page Animations
+      gsap.from("#page1 video", {
+        scale: 1.2,
+        duration: 2,
+        delay: .3,
+        ease: "power3.inOut",
+      })
+
+      gsap.from("#right-nav", {
+        y: -200,
+        duration: 1.5,
+        delay: .4,
+        ease: "power2.inOut",
+      })
+
+      gsap.from(".hero-text-container .text-frame h1", {
+        y: "600",
+        rotation: "65deg",
+        duration: 1.4,
+        delay: .3,
+        ease: "power2.inOut",
+      });
+
+      gsap.from("#hero-content-inner", {
+        y: 190,
+        duration: 1.8,
+        delay: .2,
+        ease: "power2.inOut",
+      })
+
+      gsap.from("#scroll-indicator", {
+        y: 190,
+        duration: 1.8,
+        delay: .2,
+        ease: "power2.inOut",
+      })
+
+      gsap.from("#hero-content-inner>p", {
+        opacity: 0,
+        duration: 1,
+        delay: 2.4,
+      })
+
+      gsap.from("#hero-content-inner>button", {
+        x: -450,
+        duration: 1,
+        delay: 1.8,
+        ease: "power2.inOut",
+      })
     },
   });
 }
@@ -363,6 +413,7 @@ function disableDataScrollOnMobile() {
 
 document.addEventListener("DOMContentLoaded", () => {
   createWordFrames(".preloader-text-container");
+  createWordFrames(".hero-text-container");
   LoadingAnimation();
   disableDataScrollOnMobile();
   locoScroll();
